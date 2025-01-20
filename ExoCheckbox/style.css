@@ -1,0 +1,48 @@
+.switchBox {
+    display: none;
+}
+
+.switchBox + label {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 9rem;
+    height: 4.5rem;
+    padding: 2px;
+    background-color: #c0ceda;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.switchBox + label::before {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    height: calc(4.5rem - 4px);
+    width: calc(4.5rem - 4px);
+    background-color: #fff;
+    transition: all 0.5s;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.switchBox:checked + label {
+    background-color: #00B7E8;
+}
+
+.switchBox:checked + label::before {
+    transform: translateX(4.5rem);
+}
+
+
+.rounds + label {
+    border-radius: 3.5rem;
+
+}
+
+
+.rounds + label::before {
+    border-radius: 3.5rem;
+
+}
